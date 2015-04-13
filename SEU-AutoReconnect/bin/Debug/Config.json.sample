@@ -1,0 +1,8 @@
+{
+	"lan_name":"本地连接",
+	"loacl_ping_address":[
+		"58.192.112.11",
+		"bbs.seu.edu.cn",
+		"www.seu.edu.cn"],
+	"ping_test_time":2
+	}

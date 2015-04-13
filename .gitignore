@@ -1,0 +1,4 @@
+*.exe
+*.pdb
+SEU-AutoReconnect/bin/Debug/SEU-AutoReconnect.vshost.exe.config
+*.config
