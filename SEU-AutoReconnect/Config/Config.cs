@@ -13,7 +13,7 @@ namespace SEU_AutoReconnect
     [DataContract]
     class Config: SerializeBase<Config>
     {
-        public static Config CurrentConfig=new Config();
+        public static Config CurrentConfig;
         /// <summary>
         /// 本地连接名称
         /// </summary>
@@ -30,6 +30,17 @@ namespace SEU_AutoReconnect
         /// </summary>
         [DataMember]
         public int ping_test_time = 2;
+
+        /// <summary>
+        /// wlan登陆需要的用户名
+        /// </summary>
+        [DataMember]
+        public string wlan_username;
+        /// <summary>
+        /// wlan登陆需要的密码
+        /// </summary>
+        [DataMember]
+        public string wlan_password;
 
         internal static void Inital()
         {

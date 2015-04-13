@@ -18,7 +18,8 @@ namespace SEU_AutoReconnect.Network.Wlan
             string s = reader.ReadToEnd();
             WlanLoginData t = WlanLoginData.DeSerialize(s);
 
-            return t != null;
+            Console.WriteLine(WlanLoginData.Serialize(t));
+            return t.login_username != null;
         }
         public static void Login()
         {
@@ -29,7 +30,9 @@ namespace SEU_AutoReconnect.Network.Wlan
             // 内容类型
             request.ContentType = "application/x-www-form-urlencoded";
             //将URL编码后的字符串转化为字节
-            byte[] payload = System.Text.Encoding.UTF8.GetBytes("username=220131453&password=172216");
+            byte[] payload = System.Text.Encoding.UTF8.GetBytes(
+                String.Format("username={0}&password={1}", Config.CurrentConfig.wlan_username,
+                Config.CurrentConfig.wlan_password));
             //设置请求的 ContentLength 
             request.ContentLength = payload.Length;
             //获得请 求流
@@ -47,7 +50,14 @@ namespace SEU_AutoReconnect.Network.Wlan
         public static void LoginIfOffline()
         {
             if (!CheckIfLogined())
+            {
+                Console.WriteLine("User Off Line... Connecting seu-wlan");
                 Login();
+            }
+            else
+            {
+                Console.WriteLine("User On Line");
+            }
         }
     }
 }

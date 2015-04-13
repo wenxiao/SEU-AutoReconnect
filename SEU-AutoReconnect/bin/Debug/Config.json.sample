@@ -4,5 +4,7 @@
 		"58.192.112.11",
 		"bbs.seu.edu.cn",
 		"www.seu.edu.cn"],
-	"ping_test_time":2
-	}
+	"ping_test_time":2,
+	"wlan_username":"220xxxxxx",
+	"wlan_password":"XXXXXX"
+}

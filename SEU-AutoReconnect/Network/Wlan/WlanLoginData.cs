@@ -12,18 +12,18 @@ namespace SEU_AutoReconnect.Network.Wlan
     class WlanLoginData : SerializeBase<WlanLoginData>
     {
         [DataMember]
-        string login;
+        public string login;
         [DataMember]
-        string login_username;
+        public string login_username;
         [DataMember]
-        int login_time;
+        public int login_time;
         [DataMember]
-        string login_expire;
+        public string login_expire;
         [DataMember]
-        int login_remain;
+        public int login_remain;
         [DataMember]
-        string login_ip;
+        public string login_ip;
         [DataMember]
-        string login_location;
+        public string login_location;
     }
 }
