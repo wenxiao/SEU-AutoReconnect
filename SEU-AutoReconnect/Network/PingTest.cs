@@ -15,18 +15,18 @@ namespace SEU_AutoReconnect.Network
         /// 否则返回false
         /// </summary>
         /// <returns></returns>
-        public static bool batch_ping_test()
+        public static bool BatchPingTest()
         {
             int success_ct=0,fail_ct=0;
             for (int i = 0; i < Config.CurrentConfig.ping_test_time; i++)
                 foreach (var ip in Config.CurrentConfig.loacl_ping_address)
-                    if (ping_test(ip))
+                    if (SinglePingTest(ip))
                         success_ct++;
                     else
                         fail_ct++;
             return success_ct >= fail_ct;
         }
-        public static bool ping_test(string address){
+        public static bool SinglePingTest(string address){
             //远程服务器IP  
             string ipStr = address;
             //构造Ping实例  
