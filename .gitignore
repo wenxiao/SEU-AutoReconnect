@@ -1,4 +1,7 @@
+SEU-AutoReconnect/bin/Debug/Config.json
+SEU-AutoReconnect/obj/Debug/*.*
+*.manifest
+*.config
 *.exe
 *.pdb
-SEU-AutoReconnect/bin/Debug/SEU-AutoReconnect.vshost.exe.config
-*.config
+*.suo
